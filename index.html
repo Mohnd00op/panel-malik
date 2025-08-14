@@ -12,7 +12,7 @@
 
 @keyframes bloodFall {
   0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(40px); opacity: 0; }
 }
 
 .blood {
@@ -21,24 +21,20 @@
 }
 
 .blood h1 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: red;
   animation: drip 1.5s infinite;
   position: relative;
 }
 
-.blood::before,
 .blood::after {
-  content: "🩸🩸🩸🩸🩸🩸";
+  content: "🩸🩸🩸🩸🩸🩸🩸🩸";
   position: absolute;
+  bottom: -30px; /* تحت العنوان */
   left: 50%;
   transform: translateX(-50%);
-  animation: bloodFall 1.5s infinite;
   font-size: 1.5em;
-}
-
-.blood::after {
-  animation-delay: 0.75s; /* الدم يتساقط بشكل متقطع */
+  animation: bloodFall 1.5s infinite;
 }
         @import url('./zmcgpi.jpg');
         
