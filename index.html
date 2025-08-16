@@ -39,7 +39,11 @@
   font-size: 1.5em;
   animation: bloodFall 1.5s infinite;
 }
-
+#intro.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
         #intro {
   position: fixed;
   top: 0; left: 0;
@@ -487,7 +491,11 @@ body {
     
     <script>
 function enterSite() {
-  document.getElementById("intro").style.display = "none";
+  const intro = document.getElementById("intro");
+  intro.classList.add("fade-out");
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 1000); // يختفي بعد 1 ثانية (وقت الترانزيشن)
 }
     </script>
 </body></html>
