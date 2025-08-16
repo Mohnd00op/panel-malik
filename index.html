@@ -39,7 +39,8 @@
   font-size: 1.5em;
   animation: bloodFall 1.5s infinite;
 }
-#intro {
+
+        #intro {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -48,20 +49,49 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: fadeOut 3s forwards;
 }
 
-#intro h1 {
-  color: red;
-  font-size: 1em;
-  text-shadow: 0 0 20px crimson;
+.intro-box {
+  border: 2px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  max-width: 400px;
   font-family: "Courier New", monospace;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px red;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
+.intro-box h1 {
+  color: red;
+  font-size: 1.2em;
+  text-shadow: 0 0 15px crimson;
+  margin-bottom: 15px;
+}
+
+.intro-box p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.btn-glow {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  color: white;
+  background: red;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+  box-shadow: 0 0 15px red, 0 0 25px crimson, 0 0 40px darkred;
+  transition: 0.3s;
+}
+
+.btn-glow:hover {
+  background: darkred;
+  box-shadow: 0 0 20px crimson, 0 0 40px red, 0 0 60px darkred;
 }
         
         @import url('./zmcgpi.jpg');
@@ -94,7 +124,7 @@ body {
   color: darkred; /* يفضل نخليها أحمر أغمق عند الـ hover */
 }
         .panel-card {
-  background: #111;
+  bac kground: #111;
   border: 2px solid red;
   box-shadow: 0 0 25px red;
   border-radius: 12px;
@@ -341,12 +371,15 @@ body {
 </head>
 <body>
     <div id="intro">
+        <div class="intro-box">
   <h1>┏━╼╃⌬〔🩸 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 🩸〕⌬╄╾━┓ <br>
 ✦ Fast & Powerful Panel <br>
 ✦ Cheap Price & Deadly Speed <br>
 ✦ 24/7 Service – Always Online <br>
 ✦ Support During Subscription <br>
 ┗━╼━╃⌬〔🩸 𝐁𝐔𝐘 𝐍𝐎𝗪 🩸〕⌬╄━╾━┛</h1>
+            <a href="index.html" class="btn-glow">Enter Site</a>
+        </div>
     </div>
 
     <div class="blood">
